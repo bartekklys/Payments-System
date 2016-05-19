@@ -1,6 +1,15 @@
-import Entities.Payee;
+package Entities;
 
+import System.Payee;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class ContractingCompany implements Payee {
+    @Id
+    @GeneratedValue
+    private int id;
     private String name;
     private Integer bankAccount;
     private Double currentBalance;

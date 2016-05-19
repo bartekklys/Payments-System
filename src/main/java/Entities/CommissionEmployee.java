@@ -1,8 +1,12 @@
 package Entities;
 
+import javax.persistence.Entity;
+
+@Entity
 public class CommissionEmployee extends Employee {
     private static final Double bonusMultiplier = 1.5;
     private Double grossCommission = 0.0;
+    public CommissionEmployee(){}
     public CommissionEmployee(String name, Integer bankAccount, Double grossWage, Double allowance) {
         super(name, bankAccount, grossWage, allowance);
     }
