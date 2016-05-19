@@ -1,5 +1,6 @@
+package Entities;
 
-public class CommissionEmployee extends Employee {
+public class CommissionEmployee extends Employee implements Payee{
     private Double grossCommission = 0.0;
     public CommissionEmployee(String name, Integer bankAccount, Double grossWage) {
         super(name, bankAccount, grossWage);

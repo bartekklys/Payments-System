@@ -1,3 +1,4 @@
+package Entities;
 
 public interface Payee {
     String name();

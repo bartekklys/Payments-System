@@ -1,3 +1,5 @@
+import Entities.Payee;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +18,8 @@ public class PaymentSystem {
         for (Payee payee : payees) {
             Double grossPayment = payee.grossPayment();
             System.out.println("Paying to " + payee.name());
-            System.out.println("tGrosst" + grossPayment);
-            System.out.println("tTransferred to Account: " + payee.
-                    bankAccount());
+            System.out.println("tGrosst " + grossPayment);
+            System.out.println("tTransferred to Account: " + payee.bankAccount());
         }
     }
 }
