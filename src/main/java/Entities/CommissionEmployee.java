@@ -1,12 +1,16 @@
 package Entities;
 
-public class CommissionEmployee extends Employee implements Payee{
+public class CommissionEmployee extends Employee {
+    private static final Double bonusMultiplier = 1.5;
     private Double grossCommission = 0.0;
     public CommissionEmployee(String name, Integer bankAccount, Double grossWage) {
         super(name, bankAccount, grossWage);
     }
+    public void giveBonus(Double percentage) {
+        currentBonus += grossWage * (percentage/100.0) * bonusMultiplier;
+    }
     public Double grossPayment() {
-        return grossWage + doCurrentCommission();
+        return grossWage + doCurrentBonus() + doCurrentCommission();
     }
     private Double doCurrentCommission() {
         Double commission = grossCommission;
