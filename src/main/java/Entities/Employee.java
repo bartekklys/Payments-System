@@ -4,7 +4,7 @@ import System.TaxablePayee;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Employee implements TaxablePayee {
 
     @Id
