@@ -1,3 +1,5 @@
+package System;
+
 import Entities.Payee;
 
 public class ContractingCompany implements Payee {
