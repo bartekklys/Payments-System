@@ -7,17 +7,27 @@
     <groupId>Payments-System</groupId>
     <artifactId>Payments-System</artifactId>
     <version>1.0</version>
+    <properties>
+        <hibernate.version>5.1.0.Final</hibernate.version>
+        <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
+        <dbunit.version>2.5.2</dbunit.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.1.0.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>9.1-901-1.jdbc4</version>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>${dbunit.version}</version>
         </dependency>
     </dependencies>
 
