@@ -1,6 +1,7 @@
 package System;
 
 import Entities.CommissionEmployee;
+import Entities.ContractingCompany;
 import Entities.SalaryEmployee;
 
 public class PaymentApplication {
@@ -13,7 +14,7 @@ public class PaymentApplication {
         paymentSystem.addPayee(paulJones);
                 SalaryEmployee maryBrown = new SalaryEmployee("Mary Brown", 3333, 500.0, 110.0);
         paymentSystem.addPayee(maryBrown);
-        SalaryEmployee susanWhite = new SalaryEmployee("Susan White", 4444, 470.0, 130.0    );
+        SalaryEmployee susanWhite = new SalaryEmployee("Susan White", 4444, 470.0, 130.0);
         paymentSystem.addPayee(susanWhite);
         ContractingCompany acmeInc = new ContractingCompany("Acme Inc", 5555);
         paymentSystem.addPayee(acmeInc);

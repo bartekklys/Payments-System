@@ -1,13 +1,23 @@
 package Entities;
 
-public abstract class Employee implements TaxablePayee{
+import System.TaxablePayee;
+import javax.persistence.*;
 
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Employee implements TaxablePayee {
+
+    @Id
+    @GeneratedValue
+    private int id;
     private String name;
     private Integer bankAccount;
     private Double allowance;
 
     protected Double currentBonus;
     protected Double grossWage;
+
+    public Employee(){}
 
     public Employee(String name, Integer bankAccount, Double grossWage, Double allowance) {
         this.name = name;

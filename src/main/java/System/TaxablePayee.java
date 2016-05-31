@@ -1,5 +1,5 @@
-package Entities;
+package System;
 
 public interface TaxablePayee extends Payee {
-    public Double allowance();
+    Double allowance();
 }
