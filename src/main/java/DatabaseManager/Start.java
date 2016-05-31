@@ -16,8 +16,16 @@ public class Start {
         session.beginTransaction();
 
         Fairy fairy = Fairy.create();
-        Person salaryPerson = fairy.person();
 
+        for(int i = 0 ; i < 10 ; i++) {
+            Person salaryPerson = fairy.person();
+            Integer bankAccount = Integer.valueOf(fairy.baseProducer().numerify("## #### #### #### #### #### ####"));
+            Double grossWage = Double.valueOf(fairy.baseProducer().numerify("###"));
+            Double allowance = Double.valueOf(fairy.baseProducer().numerify("###"));
+            SalaryEmployee salaryEmployee = new SalaryEmployee(salaryPerson.firstName(), bankAccount, grossWage, allowance);
+
+            session.save(salaryEmployee);
+        }
         session.getTransaction().commit();
         sessionFactory.close();
     }
